@@ -33,9 +33,34 @@ header .navbar-container>* {
 
 .logo {
     flex: 0.5;
+    animation: reverseHover 0.5s forwards;
 }
 
+.logo:hover {
+    background-color: fuchsia;
+    cursor: pointer;
+    animation: animateOnHover 0.5s forwards;
+}
 
+@keyframes animateOnHover {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.1);
+    }
+}
+
+@keyframes reverseHover {
+    from {
+        transform: scale(1.1);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
 
 nav {
     flex: 2;
